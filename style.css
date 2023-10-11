@@ -46,14 +46,11 @@ header li img:hover{
     max-width: 100%;
     margin-left: 20px;
     height: 600px;
-
-
 }
 .container h1 span{
     border-bottom:6px solid hsla(154, 71%, 59%, 1) ;
 }
 .container h1{
-
     font-size: 61px;
     font-weight: 700;
     color: hsl(0,0%, 100%);
@@ -65,10 +62,13 @@ header li img:hover{
     margin-bottom: 30px;
 }
 .container a{
-    
     text-decoration: none;
     color: hsla(0, 0%, 100%);
     border-bottom:1px solid hsla(154, 71%, 59%, 1) ;
+}
+.container a:hover{
+    
+        color: hsla(154, 71%, 59%, 1) ;
 }
 .wrapper hr{
     color: hsla(0, 0%, 85%, 1);
@@ -86,7 +86,6 @@ header li img:hover{
 }
 .languages .language h4{
     color:hsla(0, 0%, 85%, 1);
-
 }
 .projects{
     padding: 20px 0;
@@ -103,6 +102,10 @@ header li img:hover{
     color: hsla(0, 0%, 100%);
     border-bottom:1px solid hsla(154, 71%, 59%, 1) ;
     text-decoration: hsla(154, 71%, 59%, 1);
+}
+
+.projects .head a:hover{
+    color: hsla(154, 71%, 59%, 1) ;
 }
 .projects .containe{
     display: grid;
@@ -132,7 +135,6 @@ header li img:hover{
 }
 
 .contact {
-    
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr) );
     gap: 30px;
@@ -153,50 +155,53 @@ header li img:hover{
     color:hsla(0, 0%, 85%, 1);;
 }
 
-    .contact .right input{
+.contact .right input{
         margin-bottom: 20px;
         margin-left: 70px;
         width: 355px;
         border: none;
         border-bottom:1px solid hsla(0, 0%, 100%, 1) ;
-        font-size: 20px;
+        font-size: 18px;
         text-transform: uppercase;
         background: transparent;
         padding: 0 0 1rem 1.5rem;
-    }
+}
 
-    .contact .right input:focus{
-        background: transparent;
-        border-bottom:1px solid #4ce1a0 ;
-    }
 
-    .contact .right textarea{
+.contact .right input,textarea{
         
-        padding: 0 0 1rem 1.5rem;
+        padding: 0 0 1rem  1.5rem;
         margin-bottom: 20px;
         text-transform: uppercase;
         margin-left: 70px;
+        border: none;
         width: 355px;
         text-align:justify;
-        border: none;
         border-bottom:1px solid hsla(0, 0%, 100%, 1) ;
-        font-size: 20px;
-        font-weight: 500;
+        font-size: 18px;
         background: transparent;
-        
-    }
-    .contact .right{
-        color: hsla(0, 0%, 85%, 1);}
-    .contact .right a:hover  
-    , a:focus{
-        color: hsla(154, 71%, 59%, 1);
-        }
-        .contact .right a{
-            float: right;
-            text-decoration: none;
-            color: hsla(0, 0%, 100%);
-            border-bottom:1px solid hsla(154, 71%, 59%, 1) ;
-        }
+        color: hsla(0, 0%, 85%, 1);
+        outline: none;        
+        border-bottom:1px solid #4ce1a0 ;
+}
+
+.contact .right input,textarea:focus{
+    background: transparent;
+}
+
+.contact .right{
+        color: hsla(0, 0%, 85%, 1);
+}
+    
+.contact .right a:hover{
+    color: hsla(154, 71%, 59%, 1) ;
+}
+.contact .right a{
+        float: right;
+        text-decoration: none;
+        color: hsla(0, 0%, 100%);
+        border-bottom:1px solid hsla(154, 71%, 59%, 1) ;
+}
 
 
 
@@ -221,7 +226,8 @@ footer ul{
     display: flex;
 }
 footer li img:hover{
-    color: hsla(154, 71%, 59%, 1);filter: brightness(0) saturate(100%) invert(99%) sepia(68%) saturate(1439%) hue-rotate(73deg) brightness(88%) contrast(100%);
+    color: hsla(154, 71%, 59%, 1);
+    filter: brightness(0) saturate(100%) invert(99%) sepia(68%) saturate(1439%) hue-rotate(73deg) brightness(88%) contrast(100%);
 }
 footer li img{
     margin: 0 10px;
@@ -229,10 +235,108 @@ footer li img{
 }
 
 
-@media (min-width: 720px){
+@media (min-width: 768px){
 .wrapper {
     background-image: url(./images/adamkeyes.svg);
     background-position: top -3.5rem right -0.18rem;
     background-size: 390px;
     background-repeat: no-repeat;
-}}
+}
+}
+
+
+
+
+    
+
+@media (max-width: 768px){
+    .main{
+        padding: 0 10px;
+    }
+    .projects .project img{
+        width: 350px;
+    }
+    .contact .right input, textarea{
+        width: 292px;
+    }
+    .container h1{
+        font-size: 42px;
+    }
+    .container p{
+        font-size: 14px;
+    }
+
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 375px){
+    .wrapper {
+        background-image: url(./images/adamkeyes.svg);
+        background-position: top 0px right 50%;
+        background-size: 190px;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+    
+    header{
+        flex-direction: column;
+        margin: 0 auto;
+        
+    }
+    header ul{
+        margin-left: 70px;
+    }
+    header ul li{
+        margin-top: 10px;
+        margin-right: 10px;
+    }
+    .container{
+        padding-top: 230px;
+        margin: 0 auto;
+        height: 560px;
+    }
+        .container h1 {
+            font-size: 41px;
+        }
+        .projects {
+            
+        text-align: start;
+        }
+        .contact .right a{
+            margin-left: 20px;
+            float:inherit;
+        }
+        .contact .right {
+            text-align: center;
+            margin: 0 auto;
+        }
+        .contact .right input, textarea{
+            margin:  0 auto;
+            margin-bottom: 10px;
+        }
+        footer{
+            margin: 0 auto;
+        flex-direction: column;
+        text-align: center;
+        }
+        footer ul {
+            margin-left: 70px;
+        }
+        footer ul li {
+            margin-top: 10px;
+            margin-right: 10px;
+        }
+
+
+        }
